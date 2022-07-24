@@ -9,3 +9,14 @@
       <% end %>
       <p><b>Average Actor Age: </b><%=@movie.average_actor_age%></p>
   </div>
+
+  <div id = "new_actor">
+  <h2>Create New Actor</h2>
+    <%= form_with url: "/movies/#{@movie.id}", method: :post, local: true do |f| %>
+      <%= f.label :actor_name %>
+      <%= f.text_field :actor_name %>
+      <%= f.label :actor_age %>
+      <%= f.text_field :actor_age %>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
