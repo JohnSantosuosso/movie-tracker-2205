@@ -4,4 +4,7 @@
     <p><b>Title: </b><%= @movie.title %></p>
      <p><b>Creation Year: </b><%= @movie.creation_year %></p>
      <p><b>Genre: </b><%= @movie.genre %></p>
+     <p><b>Actors By Age: </b><% @movie.youngest_to_oldest_actors.each do |performers| %></p>
+     <p><%=performers.name %></p>
+      <% end %>
   </div>
