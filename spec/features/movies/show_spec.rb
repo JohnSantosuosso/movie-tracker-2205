@@ -49,6 +49,7 @@ RSpec.describe 'Movies Show Page' do
     expect("Harrison Ford").to appear_before("Sean Connery")
     expect(page).to have_no_content("Robert Downey Jr.")
     expect(page).to have_no_content("Scarlett Johansson")
+    expect(page).to have_content("Average Actor Age: 43.5")
     end
   end
 end

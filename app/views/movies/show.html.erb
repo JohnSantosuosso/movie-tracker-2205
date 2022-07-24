@@ -7,4 +7,5 @@
      <p><b>Actors By Age: </b><% @movie.youngest_to_oldest_actors.each do |performers| %></p>
      <p><%=performers.name %></p>
       <% end %>
+      <p><b>Average Actor Age: </b><%=@movie.average_actor_age%></p>
   </div>
